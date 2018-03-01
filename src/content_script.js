@@ -1,3 +1,6 @@
+/**
+ * Original from https://github.com/ghuntley/word-wrap
+ */
 $(function() {
 
     // start - https://github.com/substack/node-wordwrap/blob/24e58243d6026f6340bb6e5c24f191b48c20c974/index.js
@@ -82,6 +85,9 @@ $(function() {
             if ((request.wrapText === true) && (editable !== null)) {
                 var original = editable.val();
                 var softWrapped = wordwrap.soft(80)(original);
+
+		// added FC
+		softWrapped = softWrapped.replace(/^/gm, '> ');
 
                 editable.val(softWrapped);
 

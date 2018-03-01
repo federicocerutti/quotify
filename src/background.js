@@ -1,6 +1,6 @@
 chrome.contextMenus.create(
     {
-        "title": "Wrap Text",
+        "title": "Quotify",
         "contexts":["editable"],
         "onclick": function(info, tab) 
         {
